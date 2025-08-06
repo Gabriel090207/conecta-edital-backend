@@ -1,5 +1,6 @@
 import mercadopago
 import os
+import httpx
 from dotenv import load_dotenv
 from datetime import datetime
 import asyncio
