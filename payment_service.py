@@ -16,7 +16,7 @@ if not MP_ACCESS_TOKEN:
     print("ATENÇÃO: MP_ACCESS_TOKEN não está configurado no .env. O Mercado Pago não funcionará.")
 else:
     try:
-        sdk = mercadopago.SDK(MP_ACCESS_TOKEN)
+        sdk = mercadopago.SDK(MP_ACCESS_TOKEN, ["sandbox"])
         print("✅ SDK do Mercado Pago inicializado com sucesso.")
     except Exception as e:
         print(f"Erro ao inicializar o SDK do Mercado Pago: {e}")
