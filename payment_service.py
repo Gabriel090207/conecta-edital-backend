@@ -1,6 +1,6 @@
 import mercadopago
 import os
-import httpx
+
 from dotenv import load_dotenv
 from datetime import datetime
 import asyncio
@@ -17,14 +17,12 @@ if not MP_ACCESS_TOKEN:
     print("ATENÇÃO: MP_ACCESS_TOKEN não está configurado no seu arquivo .env. O Mercado Pago não funcionará.")
 else:
     try:
-        # Usando httpx.AsyncClient para o cliente http
-        http_client = httpx.AsyncClient()
-        sdk = mercadopago.SDK(MP_ACCESS_TOKEN, http_client=http_client)
+        sdk = mercadopago.SDK(MP_ACCESS_TOKEN)
         print("SDK do Mercado Pago inicializado com sucesso.")
     except Exception as e:
-        print(f"Erro ao inicializar o SDK do Mercado Pago: {e}. Verifique seu MP_ACCESS_TOKEN e a biblioteca httpx.")
+        print(f"Erro ao inicializar o SDK do Mercado Pago: {e}. Verifique seu MP_ACCESS_TOKEN.")
         sdk = None
-
+        
 # Planos disponíveis
 PLANS = {
     "basic_plan": {
