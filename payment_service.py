@@ -13,13 +13,15 @@ MP_ACCESS_TOKEN = os.getenv('MP_ACCESS_TOKEN')
 
 sdk = None
 if not MP_ACCESS_TOKEN:
-    print("ATENÇÃO: MP_ACCESS_TOKEN não está configurado no .env. O Mercado Pago não funcionará.")
+    print("ATENÇÃO: MP_ACCESS_TOKEN não está configurado no seu arquivo .env. O Mercado Pago não funcionará.")
 else:
     try:
-        sdk = mercadopago.SDK(MP_ACCESS_TOKEN, ["sandbox"])
-        print("✅ SDK do Mercado Pago inicializado com sucesso.")
+        # Usando httpx.AsyncClient para o cliente http
+        http_client = httpx.AsyncClient()
+        sdk = mercadopago.SDK(MP_ACCESS_TOKEN, http_client=http_client)
+        print("SDK do Mercado Pago inicializado com sucesso.")
     except Exception as e:
-        print(f"Erro ao inicializar o SDK do Mercado Pago: {e}")
+        print(f"Erro ao inicializar o SDK do Mercado Pago: {e}. Verifique seu MP_ACCESS_TOKEN e a biblioteca httpx.")
         sdk = None
 
 # Planos disponíveis
