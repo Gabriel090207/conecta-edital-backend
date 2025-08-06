@@ -99,7 +99,7 @@ if not all([SMTP_HOST, EMAIL_ADDRESS, EMAIL_PASSWORD]):
 
 # NOVO: Variáveis de ambiente do Mercado Pago
 MERCADOPAGO_WEBHOOK_SECRET = os.getenv("MERCADOPAGO_WEBHOOK_SECRET")
-MERCADOPAGO_ACCESS_TOKEN = os.getenv("MERCADOPAGO_ACCESS_TOKEN")
+MP_ACCESS_TOKEN = os.getenv("MP_ACCESS_TOKEN")
 
 # Dependência de Autenticação Firebase
 async def get_current_user_uid(request: Request) -> str:
