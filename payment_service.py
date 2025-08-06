@@ -29,17 +29,16 @@ PLANS = {
         "description": "Até 3 monitoramentos simultâneos, verificação diária.",
         "price": 19.90,
         "currency_id": "BRL",
-        "plan_id": "894e4340e63b462fbf74c4f365b5b04e"
+        "plan_id": "acfb870d3be545b4b2b66fcd225274c1"
     },
     "premium_plan": {
         "title": "Plano Premium",
         "description": "Monitoramentos ilimitados, verificação em tempo real, todas as notificações.",
         "price": 1.00,
         "currency_id": "BRL",
-        "plan_id": "af9730cd58924cf1837a1fe8bcf04616"
+        "plan_id": "b8754e354096452e99c46519f061d10c"
     }
 }
-
 
 async def create_mercadopago_subscription_preference(plan_id: str, user_email: str, user_id: str) -> Optional[str]:
     """
@@ -61,7 +60,7 @@ async def create_mercadopago_subscription_preference(plan_id: str, user_email: s
         return None
 
     # URL para redirecionamento após o pagamento (ajuste se necessário)
-    FRONTEND_PUBLIC_URL = "https://seusite.com"  # Substitua pela URL do seu frontend
+    FRONTEND_PUBLIC_URL = "https://gentle-cucurucho-5f9e84.netlify.app/"  # Substitua pela URL do seu frontend
     back_url = f"{FRONTEND_PUBLIC_URL}/payment-success"
 
     preapproval_data = {
