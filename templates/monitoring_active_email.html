@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Monitoramento Ativo - Conecta Edital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style type="text/css">
+        body {margin: 0; padding: 0;}
+        table {border-collapse: collapse;}
+        .main-table {width: 100%; max-width: 600px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+        .header-banner {background: linear-gradient(135deg, #105afa, #001f85); color: #ffffff; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; padding: 20px 0; text-align: center; border-radius: 8px 8px 0 0;}
+        .content-area {padding: 20px 30px; font-family: Arial, sans-serif; color: #333333;}
+        .logo-container {text-align: center; padding: 20px 0;}
+        .logo {max-width: 150px;}
+        .greeting {font-size: 18px; font-weight: bold; margin-bottom: 10px;}
+        .subtitle {font-size: 16px; line-height: 24px; margin-bottom: 20px;}
+        .details-box {background-color: #f8f8f8; border: 1px solid #eeeeee; border-radius: 8px; padding: 20px; margin-bottom: 25px;}
+        .details-box p {margin: 0 0 10px 0;}
+        .details-box a {color: #007bff; text-decoration: none; font-weight: bold;}
+        .details-box a:hover {text-decoration: underline;}
+        .info-text {font-size: 16px; line-height: 24px; margin-bottom: 30px;}
+        .footer-section {background-color: #f1f1f1; padding: 20px 30px; border-radius: 0 0 8px 8px;}
+        .footer-text {font-size: 14px; color: #777777; text-align: center;}
+        .support-buttons {display: flex; justify-content: center; gap: 15px; margin-top: 20px;}
+        .support-button {background-color: #28a745; color: #ffffff; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-size: 14px; font-weight: bold;}
+        .support-button.email {background-color: #007bff;}
+        .support-button:hover {opacity: 0.9;}
+        .important-note {font-size: 14px; color: #888888; text-align: center; margin-top: 20px;}
+        .email-tag {background-color: #e3f2fd; color: #1976d2; padding: 3px 8px; border-radius: 5px; font-size: 0.8em; font-weight: bold;}
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td style="padding: 20px 0 30px 0;">
+                <table class="main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
+                    <tr>
+                        <td class="logo-container" style="background-color: white;">
+                            <img src="https://i.ibb.co/L5X0j7g/logo-conecta-edital.png" alt="Conecta Edital Logo" class="logo" style="display: block; margin-left: 220px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#007bff" class="header-banner" style="border-radius: 8px 8px 0 0;">
+                            MONITORAMENTO ATIVO
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="content-area">
+                            <p class="greeting">Olá, <span style="color:rgb(33, 74, 255)">{user_full_name}!</span></p>
+                            <p class="subtitle">Perfeito! Agora você conta com nosso sistema para monitorar todas as atualizações de forma automatizada.</p>
+
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="details-box">
+                                <tr>
+                                    <td align="left" style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #555555; padding-bottom: 5px;">
+                                        <strong>Diário oficial monitorado:</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; color: #333333; padding-bottom: 15px;">
+                                        <a href="{official_gazette_link}" target="_blank">{official_gazette_link}</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #555555; padding-bottom: 5px;">
+                                        <strong>ID do Edital / Concurso:</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; color: #333333; padding-bottom: 15px;">
+                                        {edital_identifier}
+                                    </td>
+                                </tr>
+                                {candidate_section}
+                                {keywords_section}
+                            </table>
+
+                            <p class="info-text">Você não precisa fazer mais nada. A partir de agora, enviaremos notificações por e-mail sempre que encontrarmos novidades sobre seu concurso.</p>
+
+                            <p class="footer-text" style="font-weight: bold; margin-bottom: 10px;">Precisa de ajuda?</p>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr><br>
+                                    <td align="center" style="padding-bottom: 20px;">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td>
+                                                    <a href="https://wa.me/55SEUNUMERO" target="_blank" style="background-color: #28a745; color: #ffffff; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-size: 14px; font-weight: bold; margin-right: 10px;">
+                                                        <i class="fab fa-whatsapp"></i> Nos chame no WhatsApp
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="mailto:suporte@conectaedital.com" target="_blank" style="background-color: #007bff; color: #ffffff; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-size: 14px; font-weight: bold;">
+                                                        <i class="fas fa-envelope"></i> Nos envie um E-mail
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#f1f1f1" style="padding: 20px 30px; border-radius: 0 0 8px 8px;">
+                            <p class="footer-text">Este é um e-mail automático. Por favor, não responda.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
