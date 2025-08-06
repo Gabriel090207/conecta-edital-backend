@@ -10,7 +10,7 @@ from typing import Optional
 load_dotenv()
 
 # --- Configuração do Mercado Pago ---
-MP_ACCESS_TOKEN = os.getenv('MP_ACCESS_TOKEN')
+MP_ACCESS_TOKEN = os.getenv(MP_ACCESS_TOKEN)
 
 sdk = None
 if not MP_ACCESS_TOKEN:
@@ -22,7 +22,7 @@ else:
     except Exception as e:
         print(f"Erro ao inicializar o SDK do Mercado Pago: {e}. Verifique seu MP_ACCESS_TOKEN.")
         sdk = None
-        
+
 # Planos disponíveis
 PLANS = {
     "basic_plan": {
